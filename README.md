@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Calley — Automatic Call Dialer (Flutter Machine Test)
 
 Flutter implementation of the **Get Calley** mobile application built for the **C S Tech Infosolutions** Flutter Mobile App Developer Machine Test.
@@ -45,3 +46,6 @@ cd calley_app
 flutter build apk --debug
 # Output: build/app/outputs/flutter-apk/app-debug.apk
 ```
+=======
+# calley_app
+>>>>>>> 6e03ab7ab1d3e8335db8aa9fb1a260b947e80f42
