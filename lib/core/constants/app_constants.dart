@@ -1,7 +1,12 @@
 class ApiConstants {
   ApiConstants._();
 
-  static const String baseUrl = 'https://mock-api.calleyacd.com/api';
+  /// Primary backend URL (local Node.js/Express server running on your Mac's
+  /// LAN IP so your Android phone on Wi-Fi connects to it directly).
+  static const String baseUrl = 'http://192.168.1.97:3000/api';
+
+  /// Hosted Postman documentation URL.
+  static const String hostedMockBaseUrl = 'https://mock-api.calleyacd.com/api';
 
   static const String register = '/auth/register';
   static const String login = '/auth/login';
@@ -10,7 +15,7 @@ class ApiConstants {
   static const String lists = '/list';
   static String listDetails(String listId) => '/list/$listId';
 
-  static const Duration timeout = Duration(seconds: 20);
+  static const Duration timeout = Duration(seconds: 6);
 
   /// When the hosted mock server is unreachable (network error, 404, invalid
   /// TLS certificate, HTML instead of JSON...) the app falls back to a local

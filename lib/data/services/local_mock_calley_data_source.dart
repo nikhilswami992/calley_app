@@ -95,7 +95,9 @@ class LocalMockCalleyDataSource implements CalleyDataSource {
   @override
   Future<String> sendOtp({required String email}) async {
     await _latency();
-    return 'OTP sent';
+    final r = Random();
+    final code = (100000 + r.nextInt(900000)).toString();
+    return code;
   }
 
   @override

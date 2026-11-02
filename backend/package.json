@@ -1,0 +1,14 @@
+{
+  "name": "calley-backend",
+  "version": "1.0.0",
+  "description": "Node.js/Express implementation of the Calley Mock API V2 Postman specification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  }
+}

@@ -60,12 +60,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     if (!mounted) return;
     if (ok) {
-      final offlineNote = app.usingOfflineFallback
-          ? ' (Offline mock active — enter any 6-digit OTP, e.g. 229166)'
-          : '';
+      final codeInfo =
+          app.lastOtp != null ? ' (OTP Code: ${app.lastOtp})' : '';
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('OTP sent to ${_emailCtrl.text.trim()}$offlineNote'),
+          content: Text('OTP sent to ${_emailCtrl.text.trim()}$codeInfo'),
         ),
       );
       Navigator.of(context).push(
