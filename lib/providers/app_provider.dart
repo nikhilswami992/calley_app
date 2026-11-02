@@ -69,7 +69,6 @@ class AppProvider extends ChangeNotifier {
   bool _isLoadingLists = false;
   bool _isLoadingDetails = false;
   String? _errorMessage;
-  String? _lastOtp;
 
   AppLanguage get language => _language;
   bool get hasSelectedLanguage => _hasSelectedLanguage;
@@ -85,7 +84,6 @@ class AppProvider extends ChangeNotifier {
   bool get isLoadingLists => _isLoadingLists;
   bool get isLoadingDetails => _isLoadingDetails;
   String? get errorMessage => _errorMessage;
-  String? get lastOtp => _lastOtp;
   bool get usingOfflineFallback => _repo.usingOfflineFallback;
 
   bool get hasSeenIntro {
@@ -145,10 +143,7 @@ class AppProvider extends ChangeNotifier {
         email: email.trim(),
         password: password,
       );
-      final otpResult = await _repo.sendOtp(email: email.trim());
-      if (RegExp(r'^\d{6}$').hasMatch(otpResult)) {
-        _lastOtp = otpResult;
-      }
+      await _repo.sendOtp(email: email.trim());
       _mobile = mobile.trim().isEmpty ? _mobile : mobile.trim();
       _pendingRegistration = PendingRegistration(
         name: name.trim(),
@@ -172,10 +167,7 @@ class AppProvider extends ChangeNotifier {
       return false;
     }
     return _guard(() async {
-      final otpResult = await _repo.sendOtp(email: email);
-      if (RegExp(r'^\d{6}$').hasMatch(otpResult)) {
-        _lastOtp = otpResult;
-      }
+      await _repo.sendOtp(email: email);
     });
   }
 

@@ -1,0 +1,34 @@
+{
+  "users": {
+    "testing@yopmail.com": {
+      "_id": "68626f9497757cb741f449b0",
+      "username": "Dhrubo",
+      "email": "testing@yopmail.com",
+      "password": "123"
+    },
+    "dhrubo@yopmail.com": {
+      "_id": "68626f9497757cb741f449b0",
+      "username": "Dhrubo",
+      "email": "dhrubo@yopmail.com",
+      "password": "123"
+    },
+    "swati@cstech.in": {
+      "_id": "2f8bbb33a58a62070e83017b",
+      "username": "Swati",
+      "email": "swati@cstech.in",
+      "password": "123"
+    },
+    "nikhilswami196@gmail.com": {
+      "_id": "be36469cbad9e66be9de6f11",
+      "username": "Nikhil",
+      "email": "nikhilswami196@gmail.com",
+      "password": "1q2w3e4r5t"
+    }
+  },
+  "otps": {
+    "nikhilswami196@gmail.com": {
+      "otp": "753588",
+      "createdAt": "2026-11-02T17:39:55.217Z"
+    }
+  }
+}

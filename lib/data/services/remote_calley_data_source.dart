@@ -45,9 +45,6 @@ class RemoteCalleyDataSource implements CalleyDataSource {
   @override
   Future<String> sendOtp({required String email}) async {
     final json = await _api.post(ApiConstants.sendOtp, {'email': email});
-    if (json is Map && json['otp'] is String) {
-      return json['otp'] as String;
-    }
     return _message(json, 'OTP sent');
   }
 

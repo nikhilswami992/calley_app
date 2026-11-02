@@ -106,48 +106,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (app.lastOtp != null)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 14),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(10),
-                onTap: () => _onDigitChanged(0, app.lastOtp!),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 14,
-                    vertical: 10,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.lightBlue,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.primary.withValues(alpha: 0.35),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(
-                        Icons.mark_email_read_outlined,
-                        size: 18,
-                        color: AppColors.primary,
-                      ),
-                      const SizedBox(width: 8),
-                      Flexible(
-                        child: Text(
-                          'Your OTP code is ${app.lastOtp} (Tap to auto-fill)',
-                          style: GoogleFonts.inter(
-                            fontSize: 12.5,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
           const SizedBox(height: 18),
           Text(
             'Whatsapp OTP\nVerification',
